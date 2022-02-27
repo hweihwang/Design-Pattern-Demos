@@ -2,7 +2,7 @@
 
 namespace DesignPattern;
 
-class Subject
+abstract class Subject
 {
     public int $cost = 0;
 
@@ -16,7 +16,7 @@ class MilkTea extends Subject
     public string $description = 'MilkTea';
 }
 
-class Decorator extends Subject
+abstract class Decorator extends Subject
 {
     public function __construct(public Subject $subject)
     {
